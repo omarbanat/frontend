@@ -1,6 +1,8 @@
 .container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
 .blog-card {
@@ -8,4 +10,11 @@
   border-radius: 15px;
   width: fit-content;
   padding: 20px;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 20px;
 }

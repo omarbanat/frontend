@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import BlogCard from './components/BlogCard';
+import AddBlog from './components/AddBlog';
 
 function App() {
   const [data, setData] = useState([]);
@@ -17,16 +18,19 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      {data.map((blog) => (
-        <BlogCard
-          key={blog._id}
-          title={blog.title}
-          publisher={blog.publisher}
-          date={blog.date}
-          body={blog.body}
-        />
-      ))}
+    <div>
+      <AddBlog />
+      <div className="container">
+        {data.map((blog) => (
+          <BlogCard
+            key={blog._id}
+            title={blog.title}
+            publisher={blog.publisher}
+            date={blog.date}
+            body={blog.body}
+          />
+        ))}
+      </div>
     </div>
   );
 }
